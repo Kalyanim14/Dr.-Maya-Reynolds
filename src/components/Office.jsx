@@ -5,7 +5,7 @@ import Reveal from "./Reveal";
 
 export default function Office() {
   return (
-    <section className="bg-[var(--color-secondary)] py-24">
+    <section id="office" className="bg-[var(--color-secondary)] py-24">
       <div className="max-w-7xl mx-auto px-6 space-y-20">
 
         {/* Top: Heading + Intro + Images */}

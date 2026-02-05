@@ -1,71 +1,133 @@
 import Image from "next/image";
-import trauma from "../assets/trauma.jpg";
-import anxiety from "../assets/anxiety.jpg";
+import office1 from "../assets/office1.jpeg";
+import office2 from "../assets/office2.jpeg";
 import Reveal from "./Reveal";
 
 export default function DedicatedSection() {
   return (
     <section className="bg-[var(--color-background-alt)] py-24">
       <div className="max-w-6xl mx-auto px-6 space-y-16">
+
+        {/* Card 1 — Trauma-Informed Care */}
         <Reveal>
-        {/* Card 1 */}
-        <div className="bg-[var(--color-accent)] border border-[var(--color-primary)]/20 rounded-2xl p-10 
-                        grid grid-cols-1 md:grid-cols-[260px_1fr] 
-                        gap-6 md:gap-8 items-center">
+          <div
+            className="
+              bg-[var(--color-accent)]
+              border border-[var(--color-primary)]/20
+              rounded-2xl p-10
+              grid grid-cols-1 md:grid-cols-[320px_1fr]
+              gap-8
+              items-start md:items-center
+            "
+          >
+            {/* Office Image */}
+            <Image
+              src={office1}
+              alt="Calm therapy office environment"
+              className="w-full h-[240px] rounded-xl object-cover"
+            />
 
-          {/* Image */}
-          <Image
-            src={trauma}
-            alt="Trauma-Informed Care"
-            className="aspect-square rounded-full object-cover mx-auto md:mx-0"
-          />
+            {/* Text Content */}
+            <div className="max-w-xl">
+              {/* Tag */}
+              <span className="inline-block mb-3 text-xs tracking-wide uppercase text-[var(--color-primary)]/70">
+                In-Person & Telehealth
+              </span>
 
-          {/* Text */}
-          <div className="max-w-xl">
-            <h2 className="text-2xl md:text-3xl font-semibold text-[var(--color-primary)] mb-4">
-              Trauma-Informed Care
-            </h2>
+              <h2 className="text-2xl md:text-3xl font-semibold text-[var(--color-primary)] mb-4">
+                Trauma-Informed Care
+              </h2>
 
-            <p className="text-gray-700 leading-relaxed">
-              Trauma affects more than memory—it shapes how the nervous system responds to stress, relationships, and everyday life. Trauma-informed care recognizes this and places safety, choice, and pacing at the center of therapy.<br /><br />
+              <p className="text-[var(--foreground)]/80 leading-relaxed">
+                Trauma affects more than memory—it shapes how the nervous system
+                responds to stress, relationships, and everyday life. Trauma-informed
+                care places safety, choice, and pacing at the center of therapy.
+                <br /><br />
 
-              In our work together, we focus first on stabilization and regulation. This means helping your body and nervous system feel more grounded before exploring difficult experiences. Therapy is not about reliving trauma or pushing through painful memories, but about creating a sense of safety and control in the present.<br /><br />
+                Sessions take place in a quiet, private office designed to feel
+                grounding and contained, allowing your nervous system to settle
+                before deeper work begins.
+                <br /><br />
 
-              We move at a pace that feels manageable for you, whether you’re working through a single distressing event or long-standing, complex trauma. The goal is to support healing in a way that feels respectful, empowering, and sustainable—not overwhelming.<br />
-              <br /><br />
-              <span className="italic">This builds serious trust.</span>
-            </p>
+                We focus first on stabilization and regulation, moving into deeper
+                processing only when it feels supportive and manageable.
+              </p>
+
+              {/* Subtle Office Link */}
+              <a
+                href="#office"
+                className="mt-4 inline-block text-sm text-[var(--color-primary)] underline underline-offset-4 hover:opacity-70"
+              >
+                View the therapy space
+              </a>
+
+              {/* CTA */}
+              <p className="mt-6 text-sm italic text-[var(--foreground)]/70">
+                A steady, respectful approach that prioritizes safety and trust.
+              </p>
+            </div>
           </div>
-        </div>
         </Reveal>
+
+        {/* Card 2 — Burnout & High Achievers */}
         <Reveal>
-        {/* Card 2 */}
-        <div className="bg-[var(--color-accent)] border border-[var(--color-primary)]/20 rounded-2xl p-10 
-                        grid grid-cols-1 md:grid-cols-[260px_1fr] 
-                        gap-6 md:gap-8 items-center">
+          <div
+            className="
+              bg-[var(--color-accent)]
+              border border-[var(--color-primary)]/20
+              rounded-2xl p-10
+              grid grid-cols-1 md:grid-cols-[320px_1fr]
+              gap-8
+              items-start md:items-center
+            "
+          >
+            {/* Office Image */}
+            <Image
+              src={office2}
+              alt="Private therapy office seating area"
+              className="w-full h-[240px] rounded-xl object-cover"
+            />
 
-          <Image
-            src={anxiety}
-            alt="Burnout and High Achievers"
-            className="aspect-square rounded-full object-cover mx-auto md:mx-0"
-          />
+            {/* Text Content */}
+            <div className="max-w-xl">
+              {/* Tag */}
+              <span className="inline-block mb-3 text-xs tracking-wide uppercase text-[var(--color-primary)]/70">
+                In-Person & Telehealth
+              </span>
 
-          <div className="max-w-xl">
-            <h2 className="text-2xl md:text-3xl font-semibold text-[var(--color-primary)] mb-4">
-              Burnout, High Achievers & Professionals
-            </h2>
+              <h2 className="text-2xl md:text-3xl font-semibold text-[var(--color-primary)] mb-4">
+                Burnout, High Achievers & Professionals
+              </h2>
 
-            <p className="text-gray-700 leading-relaxed">
-              Many high-achieving professionals appear capable and successful on the outside while feeling exhausted, disconnected, or overwhelmed internally. Burnout often develops gradually—through chronic stress, high expectations, and the pressure to keep performing without rest.<br /><br />
+              <p className="text-[var(--foreground)]/80 leading-relaxed">
+                Many high-achieving professionals appear successful externally
+                while feeling exhausted, disconnected, or overwhelmed internally.
+                Burnout often develops through sustained pressure and chronic stress.
+                <br /><br />
 
-              In therapy, we focus on understanding how stress, perfectionism, and over-responsibility affect both your emotional well-being and your nervous system. Rather than pushing for quick fixes, the work centers on slowing down, restoring balance, and developing sustainable ways to manage pressure.<br /><br />
+                In-person sessions provide a quiet, distraction-free environment
+                away from work demands—creating space to slow down, reflect, and
+                reset outside of performance roles.
+                <br /><br />
 
-              This approach supports you in reconnecting with your needs, setting healthier boundaries, and building a life that feels more regulated, meaningful, and aligned—not just productive.
-              <br /><br />
-              <span className="italic">Support that meets you where you are.</span>
-            </p>
+                Therapy focuses on restoring balance, setting healthier boundaries,
+                and supporting sustainable change.
+              </p>
+
+              {/* Subtle Office Link */}
+              <a
+                href="#office"
+                className="mt-4 inline-block text-sm text-[var(--color-primary)] underline underline-offset-4 hover:opacity-70"
+              >
+                See where sessions take place
+              </a>
+
+              {/* CTA */}
+              <p className="mt-6 text-sm italic text-[var(--foreground)]/70">
+                Support designed for high performers who need space to recalibrate.
+              </p>
+            </div>
           </div>
-        </div>
         </Reveal>
 
       </div>

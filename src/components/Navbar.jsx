@@ -22,67 +22,104 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`sticky top-0 z-50 transition-all duration-300
+      className={`
+        sticky top-0 z-50
+        transition-all duration-300 ease-out
         ${active
           ? "-translate-y-full bg-transparent"
-          : "translate-y-0  bg-[#FBF7F0]/90 backdrop-blur-sm"}
+          : "translate-y-0 bg-[var(--background)]/90 backdrop-blur-sm"}
       `}
-      style={{ backgroundColor: active ? 'transparent' : 'rgba(251, 247, 240, 0.9)' }}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between py-4">
 
           {/* Logo / Title */}
-          <span className="text-xl sm:text-2xl lg:text-3xl font-semibold text-gray-800">
+          <span className="text-xl sm:text-2xl lg:text-3xl font-semibold text-[var(--foreground)]">
             Licensed Clinical Psychologist
           </span>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex justify-between gap-9 text-xl text-[var(--color-primary)]">
-            <a href="/" className="hover:text-gray-900/50">Home</a>
-            <a href="/#about" className="hover:text-gray-900/50">About</a>
-            <a href="/About" className="hover:text-gray-900/50">Contact</a>
+          <div className="hidden md:flex gap-9 text-lg text-[var(--color-primary)]">
+            <a href="/" className="transition-opacity hover:opacity-70">
+              Home
+            </a>
+            <a href="/#about" className="transition-opacity hover:opacity-70">
+              About
+            </a>
+            <a href="/About" className="transition-opacity hover:opacity-70">
+              Contact
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 text-gray-700"
+            aria-label="Toggle menu"
+            className="md:hidden p-2 text-[var(--foreground)]"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? (
-              // X Icon
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              /* X Icon */
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-8 h-8"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
               </svg>
             ) : (
-              // Hamburger Icon
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              /* Hamburger Icon */
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-8 h-8"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
               </svg>
             )}
           </button>
         </div>
 
-        {/* Mobile Menu Dropdown */}
+        {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden absolute top-full left-0 w-full bg-[var(--color-background-alt)] border-b border-gray-200 shadow-lg py-4 px-4 flex flex-col gap-4 text-center">
+          <div className="
+            md:hidden absolute top-full left-0 w-full
+            bg-[var(--color-background-alt)]
+            border-b border-[var(--color-primary)]/20
+            shadow-lg
+            py-6 px-4
+            flex flex-col gap-4 text-center
+          ">
             <a
               href="/"
-              className="text-xl text-[var(--color-primary)] hover:text-gray-900"
+              className="text-lg text-[var(--color-primary)] transition-opacity hover:opacity-70"
               onClick={() => setIsOpen(false)}
             >
               Home
             </a>
             <a
               href="/#about"
-              className="text-xl text-[var(--color-primary)] hover:text-gray-900"
+              className="text-lg text-[var(--color-primary)] transition-opacity hover:opacity-70"
               onClick={() => setIsOpen(false)}
             >
               About
             </a>
             <a
               href="/About"
-              className="text-xl text-[var(--color-primary)] hover:text-gray-900"
+              className="text-lg text-[var(--color-primary)] transition-opacity hover:opacity-70"
               onClick={() => setIsOpen(false)}
             >
               Contact

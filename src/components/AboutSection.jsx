@@ -24,8 +24,9 @@ export default function AboutSection() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-6 max-w-md text-md text-[var(--color-foreground)]/80">
-              Licensed Clinical Psychologist in Santa Monica, CA
-              Therapy for anxiety, trauma, and burnout — for thoughtful adults who feel overwhelmed but keep pushing through.
+              I’m Dr. Maya Reynolds, a licensed clinical psychologist offering therapy for adults navigating anxiety, trauma, and burnout. Many of my clients are thoughtful, high-achieving individuals who feel emotionally exhausted or stuck in patterns of overthinking and self-pressure.<br /><br />
+
+              My work is collaborative and paced with care. I integrate evidence-based approaches like CBT, EMDR, and mindfulness to support both emotional insight and nervous system regulation. I offer in-person sessions from my Santa Monica office as well as secure telehealth across California.
             </p>
           </Reveal>
 
